@@ -1,0 +1,356 @@
+/* ========== Base ========== */
+:root{
+    /* Color choices tuned to closely match the screenshot */
+    --ink: #0f172a;                 /* dark text */
+    --muted: #8c97a9;               /* light label text */
+    --bg: #ffffff;
+    --frame-green: #000;         /* thin green border around whole mock */
+    --navy: #0c2f66;                /* deep navy (calendar shell & accents) */
+    --search-blue: #213e86;         /* search field background */
+    --chip-fill: #d7e6ff;           /* light blue pill */
+    --chip-text: #1f3b83;           /* pill text */
+    --card-fill: #f3f6fb;           /* helper block background */
+    --btn-gray: #b7bfcc;            /* Search Calendar button */
+    --divider: #dde3ee;
+  
+    --event-dark: #9d1f2a;          /* dark red event */
+    --event-light: #f0b6bf;         /* light red event */
+  }
+  
+  * { box-sizing: border-box; }
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  }
+  
+  /* ========== Phone Frame ========== */
+  .phone{
+    width: 390px;                 /* iPhone 14 logical width */
+    margin: 16px auto;
+    padding: 14px 14px 24px;
+    border: 3px solid var(--frame-green);
+    border-radius: 14px;
+  }
+  
+  /* ========== Header ========== */
+  .brand{
+    margin: 0;
+    font-family: "Libre Bodoni","Times New Roman",serif;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.2px;
+  }
+  .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .shield{
+    width: 34px;
+    height: 34px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* ========== Search Card ========== */
+  .search-card{
+    background: transparent;
+    border-radius: 12px;
+  }
+  
+  .search-input{
+    background: var(--search-blue);
+    color: #fff;
+    border-radius: 12px;
+    padding: 18px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search-text{
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .search-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: #113069;
+    border: 2px solid #fff;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+  }
+  .search-btn .glass-circle{
+    width: 14px; height: 14px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: block;
+  }
+  .search-btn .glass-handle{
+    content: "";
+    position: absolute;
+    width: 10px; height: 2px;
+    background: #fff;
+    transform: rotate(45deg);
+    right: 6px; bottom: 8px;
+    border-radius: 1px;
+  }
+  
+  .helper-block{
+    background: var(--card-fill);
+    border-radius: 12px;
+    padding: 12px 12px 14px;
+    margin-top: 10px;
+    border: 1px solid var(--divider);
+  }
+  .subhead{
+    margin: 6px 0 6px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .hint-list,
+  .recent-list{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 6px 0;
+  }
+  .hint-list li,
+  .recent-list li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+    font-size: 15px;
+  }
+  
+  /* Simple CSS icons (no libraries) */
+  .icon{
+    display: inline-grid;
+    place-items: center;
+    line-height: 1;
+  }
+  .info{
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 1.6px solid #c6cbd6;
+    color: #aeb6c6;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .plus{
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 1.6px solid #c6cbd6;
+    position: relative;
+  }
+  .plus::before,
+  .plus::after{
+    content:"";
+    position:absolute;
+    background:#9aa3b7;
+    left:50%; top:50%;
+    transform: translate(-50%,-50%);
+  }
+  .plus::before{ width: 10px; height: 2px; }
+  .plus::after{ width: 2px; height: 10px; }
+  
+  .btn{
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-weight: 600;
+  }
+  .calendar-btn{
+    margin-top: 8px;
+    width: 160px;
+    background: var(--btn-gray);
+    color: #ffffff;
+  }
+  
+  /* ========== Label ========== */
+  .light-label{
+    margin: 10px 2px 8px;
+    color: #c0c4cd;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  /* ========== Chips ========== */
+  .chips{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .chip{
+    background: var(--chip-fill);
+    color: var(--chip-text);
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 0;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* ========== Calendar ========== */
+  .calendar{
+    background: var(--navy);
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    position: relative;
+  }
+  .calendar .close{
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    width: 22px; height: 22px;
+    border: 1.6px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    background: transparent;
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  
+  .cal-head{
+    display: grid;
+    grid-template-columns: 40px repeat(4, 1fr);
+    column-gap: 6px;
+    padding: 4px 6px 6px 6px;
+    font-weight: 700;
+    font-size: 12px;
+    opacity: 0.95;
+  }
+  .cal-head span:first-child{ color: transparent; } /* empty slot matching time column */
+  
+  .cal-body{
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 6px;
+    align-items: start;
+    background: transparent;
+  }
+  
+  .times{
+    display: grid;
+    grid-auto-rows: 24px;
+    row-gap: 2px;
+    padding-left: 2px;
+    font-size: 10px;
+    color: #dbe3ff;
+    opacity: 0.85;
+  }
+  
+  .grid{
+    position: relative;
+    height: 320px;               /* grid drawing height */
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 6px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 6px;
+  }
+  
+  /* Grid lines */
+  .grid::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(#eef2ff 1px, transparent 1px) 0 0/100% 24px; /* horizontal */
+  }
+  .grid > * { position: relative; }
+  
+  /* Day separators */
+  .grid > :nth-child(1),
+  .grid > :nth-child(2),
+  .grid > :nth-child(3),
+  .grid > :nth-child(4),
+  .grid > :nth-child(5){
+    /* dummy to preserve structure if needed */
+  }
+  
+  /* Event cards */
+  .event{
+    position: absolute;
+    left: calc((var(--day) - 1) * (100% / 5) + 6px * (var(--day) - 1));
+    width: calc((100% - 24px) / 5);         /* 24px total gaps */
+    top: calc(var(--start) * 24px);         /* 24px per row */
+    height: calc(var(--dur) * 24px);
+    border-radius: 10px;
+    padding: 8px;
+    font-weight: 800;
+    font-size: 12px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05), 0 8px 18px rgba(0,0,0,0.08) inset;
+  }
+  .event.dark{
+    background: var(--event-dark);
+    color: #fff;
+  }
+  .event.light{
+    background: var(--event-light);
+    color: #6b0d18;
+    border: 1px solid #f2c7cd;
+  }
+  
+
+  /* new vars (optional) */
+:root{
+    --submit-fill: #89DB93;
+    --submit-border: #1F7F39;
+    --submit-text: #0f172a;
+  }
+  
+  /* bottom submit button */
+  .bottom-cta{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 0;
+  }
+  
+  .submit-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 22px;
+    border-radius: 10px;
+    border: 2px solid var(--submit-border);
+    background: var(--submit-fill);
+    color: var(--submit-text);
+    font-family: "Libre Bodoni","Times New Roman",serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: .2px;
+  }
+  
+  .arrow-circle{
+    display: inline-grid;
+    place-items: center;
+    width: 26px; height: 26px;
+    border-radius: 999px;
+    border: 2px solid var(--submit-border);
+    background: #A6E4AE;
+    font-weight: 800;
+    line-height: 1;
+  }
+  

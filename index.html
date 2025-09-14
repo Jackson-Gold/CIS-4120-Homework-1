@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Path @ Penn – Mobile Mock</title>
+
+  <!-- Libre Bodoni for the title; Times New Roman will be the fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="phone">
+    <!-- Top Bar -->
+    <header class="top">
+      <h1 class="brand">Path @ Penn</h1>
+      <img src="pennshield.jpeg" alt="Penn Shield" class="shield" />
+    </header>
+
+    <!-- Search Panel -->
+    <section class="search-card" aria-label="Search">
+      <div class="search-input">
+        <span class="search-text">CIS 4120</span>
+        <button class="icon search-btn" aria-label="Search">
+          <span class="glass-circle"></span>
+          <span class="glass-handle"></span>
+        </button>
+      </div>
+
+      <div class="helper-block">
+        <p class="subhead">Maybe DSGN:</p>
+        <ul class="hint-list">
+          <li>
+            <span class="icon info" aria-hidden="true">i</span>
+            <span>DSGN 1010 - Basics of Design</span>
+          </li>
+          <li>
+            <span class="icon info" aria-hidden="true">i</span>
+            <span>CIS 3200 - Algorithmic Design</span>
+          </li>
+        </ul>
+
+        <p class="subhead">Recent Searches:</p>
+        <ul class="recent-list">
+          <li>
+            <span class="icon plus" aria-hidden="true"></span>
+            <span>CIS 5450</span>
+          </li>
+          <li>
+            <span class="icon plus" aria-hidden="true"></span>
+            <span>1.5 CU</span>
+          </li>
+        </ul>
+
+        <button class="btn calendar-btn" aria-label="Search calendar">Search Calendar</button>
+      </div>
+    </section>
+
+    <p class="light-label">Recent Search Block</p>
+
+    <!-- Chips -->
+    <section class="chips">
+      <button class="chip">Campus/Online</button>
+      <button class="chip">Divison</button>
+      <button class="chip">Professor</button>
+      <button class="chip">Level</button>
+      <button class="chip">Credit</button>
+      <button class="chip">Dificults</button>
+    </section>
+
+    <!-- Calendar -->
+    <section class="calendar">
+      <button class="icon close" aria-label="Close overlay">×</button>
+      <div class="cal-head">
+        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
+      </div>
+
+      <div class="cal-body">
+        <div class="times">
+          <span>8:30</span>
+          <span>9:00</span>
+          <span>9:30</span>
+          <span>10:00</span>
+          <span>10:30</span>
+          <span>11:00</span>
+          <span>11:30</span>
+          <span>12:00</span>
+          <span>12:30</span>
+          <span>1:00</span>
+          <span>1:30</span>
+          <span>2:00</span>
+          <span>2:30</span>
+          <span>3:00</span>
+        </div>
+
+        <!-- grid columns for days -->
+        <div class="grid">
+          <!-- Events (absolute inside .grid). Positions tuned to match mockup -->
+          <div class="event dark" style="--day:1; --start:2.0; --dur:2.5;">DSGN 2570</div>
+          <div class="event light" style="--day:2; --start:3.0; --dur:2.5;">CIS 4120</div>
+          <div class="event dark" style="--day:2; --start:6.5; --dur:2.5;">CIS 5450</div>
+          <div class="event dark" style="--day:3; --start:5.5; --dur:2.5;">DSGN 2570</div>
+          <div class="event light" style="--day:4; --start:3.0; --dur:2.5;">CIS 4120</div>
+          <div class="event dark" style="--day:4; --start:6.5; --dur:2.5;">CIS 5450</div>
+          <!-- <div class="event dark" style="--day:5; --start:11.5; --dur:2.5;">STAT 5330</div> -->
+        </div>
+      </div>
+    </section>
+    <section class="bottom-cta">
+        <button type="button" class="submit-btn" aria-label="Submit registration">
+          <span class="submit-text">Submit</span>
+          <span class="arrow-circle" aria-hidden="true">←</span>
+        </button>
+      </section>
+  
+  </main>
+</body>
+</html>
